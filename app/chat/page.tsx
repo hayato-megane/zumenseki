@@ -22,6 +22,14 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+
+// PDF.js worker設定
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
+
+
 interface Point {
   x: number
   y: number
