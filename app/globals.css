@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 /* react-pdf CSS */
 @import 'react-pdf/dist/Page/AnnotationLayer.css';
 @import 'react-pdf/dist/Page/TextLayer.css';
 
+=======
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

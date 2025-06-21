@@ -21,11 +21,22 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+<<<<<<< HEAD
 import { Document, Page, pdfjs } from 'react-pdf'
+=======
+
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
 
 // PDF.js worker設定
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
 interface Point {
   x: number
   y: number
@@ -107,7 +118,10 @@ export default function PDFAreaCalculator() {
   const [pdfFile, setPdfFile] = useState<File | null>(null)
   const [pdfPages, setPdfPages] = useState<PDFPage[]>([])
   const [currentPage, setCurrentPage] = useState(0)
+<<<<<<< HEAD
   const [numPages, setNumPages] = useState<number>(0)
+=======
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
   const [points, setPoints] = useState<Point[]>([])
   const [scaleFactor, setScaleFactor] = useState(1)
   const [unit, setUnit] = useState("m")
@@ -116,6 +130,7 @@ export default function PDFAreaCalculator() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [usageData, setUsageData] = useState<UsageData | null>(null)
+<<<<<<< HEAD
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // PDF読み込み成功時の処理
@@ -146,6 +161,8 @@ export default function PDFAreaCalculator() {
     setPoints([])
     setAllMeasurements([])
   }
+=======
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
 
   // 利用状況を取得
   const fetchUsageData = useCallback(async () => {
@@ -279,7 +296,12 @@ export default function PDFAreaCalculator() {
                   onChange={(e) => {
                     const file = e.target.files?.[0]
                     if (file) {
+<<<<<<< HEAD
                       handleFileSelect(file)
+=======
+                      setPdfFile(file)
+                      // ここでPDF処理ロジックを実装
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
                     }
                   }}
                 />
@@ -295,6 +317,7 @@ export default function PDFAreaCalculator() {
                     PDFファイルを選択してください
                   </div>
                 )}
+<<<<<<< HEAD
 
                 {pdfFile && (
                   <div className="space-y-4">
@@ -349,6 +372,8 @@ export default function PDFAreaCalculator() {
                     </Document>
                   </div>
                 )}
+=======
+>>>>>>> ed8e8455efb5b503630cda4400ff8196949698b2
               </div>
             </CardContent>
           </Card>
